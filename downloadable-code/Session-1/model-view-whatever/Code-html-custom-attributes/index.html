@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" ng-app="myApp">
     <head>
         <title>Introduction to AngularJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -35,11 +35,12 @@
 			</div>
 			</nav>
 		</header>
-        <div class="container">
+        <div class="container" ng-controller='callFunction'>
           <div class="row">
             <div class="col-md-12">
                 
                 <h1 ng-reply="Hello back!">Hello World!</h1>
+                <h4 ng-if="returnHello()">Hello There!</h4>  
         
               </div>  
 		  </div>
@@ -48,7 +49,8 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://code.jquery.com/jquery-1.12.2.min.js"> </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+    <!-- load angular via CDN -->
+    <script src="//code.angularjs.org/1.5.2/angular.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

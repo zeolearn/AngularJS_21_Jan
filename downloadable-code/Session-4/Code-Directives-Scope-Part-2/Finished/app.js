@@ -27,7 +27,11 @@ myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
         name: 'John Doe',
         address: '555 Main St., New York, NY 11111'
     }
-    
+    console.log($scope.person)
+//    $scope.person.__proto__.toString = function() {
+//        return "Person Object"
+//    }
+//    console.log('proto-to-string', $scope.person.__proto__.toString())
 }]);
 
 myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams) {

@@ -69,6 +69,9 @@ myApp.directive("searchResult", function() {
        scope: {
            personObject: "=",
            formattedAddressFunction: "&"
+       },
+       compile: function(elem, attr){
+           console.log('compile', elem.html())
        }
    }
 });
