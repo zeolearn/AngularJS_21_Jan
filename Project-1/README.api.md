@@ -1,11 +1,59 @@
 # List of API required for the project
 ===============================================================
 1. ServiceName: PromoCodesService (or any other of your choice)
-API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/new'
-Returns: JSON Array
+API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/incoming'
+Returns: JSON Array []
+[
+  {
+    "_id": "5704060f3aa3ba513e69bf52",
+    "Id": null,
+    "Title": "General Information",
+    "Description": "",
+    "Organization": "AcmeInc",
+    "OrgUnit": "HR",
+    "PromoType": "customerservice",
+    "PromoCode": "42424242",
+    "Comments": "",
+    "CurrentSortingOrder": 1,
+    "OldSortingOrder": 1,
+    "createdOn": "2016-02-25T15:24:05.000Z",
+    "processed": "new",
+    "reportInfo": {
+      "reasonCode": 0,
+      "reasonText": ""
+    },
+    "activeStatus": {
+      "lastUpdated": "2016-02-25T15:24:05.000Z",
+      "active": true
+    }
+  },
+  {
+    "_id": "5704060f3aa3ba513e69bf53",
+    "Id": null,
+    "Title": "General Information",
+    "Description": "",
+    "Organization": "AcmeInc",
+    "OrgUnit": "HR",
+    "PromoType": "customerservice",
+    "PromoCode": "38456723",
+    "Comments": "",
+    "CurrentSortingOrder": 1,
+    "OldSortingOrder": 1,
+    "createdOn": "2016-02-25T15:24:05.000Z",
+    "processed": "new",
+    "reportInfo": {
+      "reasonCode": 0,
+      "reasonText": ""
+    },
+    "activeStatus": {
+      "lastUpdated": "2016-02-25T15:24:05.000Z",
+      "active": true
+    }
+  }
+]
 
 2. ServiceName: AcceptedPromoCodesService
-API: GET 'http://zeoelearn.eastus.cloudapp.azure.com/api/v1/promo-codes/approve'
+API: GET 'http://zeoelearn.eastus.cloudapp.azure.com/api/v1/promo-codes/approved'
 Returns: JSON Array
 
 3. ServiceName: OffersService
@@ -19,7 +67,7 @@ Returns:
     return offers;
 
 4. ServiceName: RejectedPromoCodesService
-API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/reject'
+API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/rejected'
 Returns: JSON Array
 
 5. ServiceName: PendingPromoCodesService (Optional)
