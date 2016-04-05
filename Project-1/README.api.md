@@ -1,11 +1,11 @@
 # List of API required for the project
 ===============================================================
 1. ServiceName: PromoCodesService (or any other of your choice)
-API: GET 'http://zeolearn.cloudapp.net/api/v1/promo-codes/new'
+API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/new'
 Returns: JSON Array
 
 2. ServiceName: AcceptedPromoCodesService
-API: GET 'http://zeoelearn.cloudapp.net/api/v1/promo-codes/approve'
+API: GET 'http://zeoelearn.eastus.cloudapp.azure.com/api/v1/promo-codes/approve'
 Returns: JSON Array
 
 3. ServiceName: OffersService
@@ -19,12 +19,29 @@ Returns:
     return offers;
 
 4. ServiceName: RejectedPromoCodesService
-API: GET 'http://zeolearn.cloudapp.net/api/v1/promo-codes/reject'
+API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/reject'
 Returns: JSON Array
 
 5. ServiceName: PendingPromoCodesService (Optional)
-API: GET 'http://zeolearn.cloudapp.net/api/v1/promo-codes/pending'
+API: GET 'http://zeolearn.eastus.cloudapp.azure.com/api/v1/promo-codes/pending'
 Returns: JSON Array 
+Sample: 
+[
+	{
+		Id: Number,
+		Title: String,
+		Description: String,
+		Organization: String,
+		OrgUnit: String,
+		PromoType: String,
+		PromoCode: String,
+		Comments: String,
+		createdOn: ISODate(), //YYYY-MM-DDTHH:MM:SS.zzzZ e.g. 2016-04-01T15:24:31.000Z
+		processed: String,
+		reportInfo: { reasonCode: Number, reasonText: String },
+		activeStatus: {}
+}
+]
 
 
 
